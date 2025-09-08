@@ -18,9 +18,10 @@ const EducationSection: React.FC = () => {
         {/* one column only, stacked vertically */}
         <div className="my-8 grid grid-cols-1 gap-8 md:my-12">
           {education.map((edu) => {
-            const cover = (edu.cover as StaticImageData).src
-              ? (edu.cover as StaticImageData).src
-              : (edu.cover as string)
+            // Properly check the type and handle the conversion safely
+            const cover = typeof edu.cover === 'string'
+              ? edu.cover
+              : ((edu.cover as StaticImageData).src || '')
 
             return (
               <EducationCard
