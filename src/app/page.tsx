@@ -5,8 +5,7 @@ import Education from '@/components/Education/EducationSection'
 import ProjectSection from '@/components/Projects/ProjectSection'
 import ServiceSection from '@/components/Services/ServiceSection'
 import Skills from '@/components/Skills/Skills'
-import TestimonialSection from '@/components/Testimonials/TestimonialSection'
-import { getAllProjects, getAllTestimonials } from '@/services'
+import { getAllProjects } from '@/services'
 import ResearchSection from '@/components/Research/ResearchSection';
 import { researchData } from '@/appData';
 import EnhancedSkills from '@/components/Skills/EnhancedSkills';
@@ -15,7 +14,6 @@ import { enhancedSkillCategories } from '@/appData';
 
 export default async function Home() {
   const projects = await getAllProjects()
-  const testimonials = await getAllTestimonials()
 
   return (
     <main>
@@ -26,7 +24,6 @@ export default async function Home() {
         <ServiceSection />
         <ProjectSection projects={projects} />
         <ResearchSection research={researchData} />
-        {/* <TestimonialSection testimonials={testimonials} /> */}
         <EnhancedSkills skillCategories={enhancedSkillCategories} />
         <ContactSection />
       </div>

@@ -19,12 +19,12 @@ const ContactForm = () => {
         const result = await submitContactForm(formData)
         setFormState(result)
         
-        // Reset form if successful
         if (result.success) {
           const form = document.getElementById('contactForm') as HTMLFormElement
           form?.reset()
         }
       } catch (error) {
+        console.error('Contact form submission error:', error)
         setFormState({
           success: false,
           message: "An unexpected error occurred. Please try again."
@@ -38,10 +38,10 @@ const ContactForm = () => {
       <div className="flex flex-col items-center justify-center py-8">
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          className="h-16 w-16 text-accent mb-4" 
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor"
+            className="h-16 w-16 text-accent mb-4" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
         >
           <path 
             strokeLinecap="round" 

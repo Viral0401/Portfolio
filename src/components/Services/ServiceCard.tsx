@@ -1,82 +1,64 @@
 import Image, { StaticImageData } from 'next/image'
+import React from 'react'
 
-interface ServiceCardTypes {
-  icon: StaticImageData | string | React.ComponentType<any>
+type IconComponent = React.ComponentType<{ className?: string }>
+
+type IconType = StaticImageData | string | IconComponent
+
+interface ServiceCardProps {
+  icon: IconType
   title: string
   shortDescription: string
   position?: string
   date?: string
 }
 
-// const ServiceCard: React.FC<ServiceCardTypes> = ({ title, shortDescription, icon, position, date }) => {
-//   const isImageModule = typeof icon === 'string' || (typeof icon === 'object' && 'src' in (icon as any))
+function isImageLike(icon: IconType): icon is StaticImageData | string {
+  return (
+    typeof icon === 'string' ||
+    (typeof icon === 'object' && icon !== null && 'src' in icon)
+  )
+}
 
-//   return (
-//     <div className="bg-secondary border-border flex flex-col items-center rounded-[14px] border p-5">
-//       {isImageModule ? (
-//         <Image src={icon as any} alt={title} className="my-1 size-14" />
-//       ) : (
-//         (() => {
-//           const IconComp = icon as React.ComponentType<any>
-//           return <IconComp className="my-1 size-14" />
-//         })()
-//       )}
-
-//       <h5 className="text-accent mt-2 mb-1 text-center text-base font-semibold">{title}</h5>
-
-//       {position && (
-//         <div className="inline-block rounded-md bg-[#10B9811A] px-2 py-0.5 text-xs font-medium text-[#34D399] mb-1">
-//           {position}
-//         </div>
-//       )}
-
-//       {date && <div className="text-neutral text-sm mb-3 mt-1">{date}</div>}
-
-//       <div className="bg-primary rounded-2xl p-4">
-//         <p className="text-primary-content text-center text-sm font-normal">{shortDescription}</p>
-//       </div>
-//     </div>
-//   )
-// }
-
-const ServiceCard: React.FC<ServiceCardTypes> = ({ title, shortDescription, icon, position, date }) => {
-  const isImageModule = typeof icon === 'string' || (typeof icon === 'object' && 'src' in (icon as any))
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  shortDescription,
+  icon,
+  position,
+  date,
+}) => {
+  const imageMode = isImageLike(icon)
 
   return (
     <div className="bg-secondary border-border flex flex-col items-center rounded-[14px] border p-5">
-      {isImageModule ? (
+      {imageMode ? (
         <div className="my-1 h-24 w-24">
           <Image
-            src={icon as any}
+            src={icon}
             alt={title}
             width={96}
-            height={50}
+            height={96}
             className="h-full w-full object-contain"
           />
         </div>
       ) : (
-        (() => {
-          const IconComp = icon as React.ComponentType<any>
-          return (
-            <div className="my-1 h-24 w-24 flex items-center justify-center">
-              <IconComp className="h-16 w-16" />
-            </div>
-          )
-        })()
+        <div className="my-1 flex h-24 w-24 items-center justify-center">
+          {React.createElement(icon as IconComponent, { className: 'h-16 w-16' })}
+        </div>
       )}
 
       <h5 className="text-accent mt-2 mb-1 text-center text-base font-semibold">{title}</h5>
 
       {position && (
-        <div className="inline-block rounded-md bg-[#10B9811A] px-2 py-0.5 text-xs font-medium text-[#34D399] mb-0.5">
+        <div className="mb-0.5 inline-block rounded-md bg-[#10B9811A] px-2 py-0.5 text-xs font-medium text-[#34D399]">
           {position}
         </div>
       )}
 
-      {date && <div className="text-neutral text-sm mb-2 mt-0">{date}</div>}
+      {date && <div className="text-neutral mb-2 mt-0 text-sm">{date}</div>}
 
       <div className="bg-primary rounded-2xl p-4">
-        <p className="text-primary-content text-center text-sm font-normal whitespace-pre-line">
+        <p className="text-primary-content whitespace-pre-line text-center text-sm font-normal">
           {shortDescription}
         </p>
       </div>
