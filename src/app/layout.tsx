@@ -18,7 +18,7 @@ const firaCode = Fira_Code({ subsets: ['latin'], weight: ['300', '400', '500', '
 
 const title = 'Viral Dalal | Looking to solve real world problems by leveraging AI and Data.'
 const description =
-  "Skilled full-stack web developer in Chicago. I build responsive, user-friendly websites with React, NextJS, and NodeJS. Let's bring your vision to life. Hire me today!"
+  ""
 
 export const metadata: Metadata = {
   title,
