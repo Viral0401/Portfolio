@@ -7,7 +7,7 @@ import { GithubIcon, LinkedIn, ResumeIcon } from '@/utils/icons'
 
 const Hero = () => {
   const role = useRoleSwitcher({
-    roles: ['AI Developer', 'Full stack developer', 'Data science engineer'],
+    roles: ['AI Developer', 'Full Stack Developer', 'Data Science Engineer'],
   })
 
   return (

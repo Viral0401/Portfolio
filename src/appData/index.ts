@@ -138,11 +138,13 @@ export const serviceData = [
     icon: NezalLogo,
     title: 'Nezal Herbocare',
     position: 'Data Science Intern',
-    date: 'September 2023 - November 2023',
-    shortDescription: `• Engineered and automated an ETL (Extract, Transform, Load) pipeline using Python and Pandas to ingest, clean, and process historical sales and inventory data, ensuring data integrity for downstream analysis.
-                        • Conducted in-depth Exploratory Data Analysis (EDA) to identify key trends and patterns, performing feature engineering to prepare the dataset for predictive modeling.
-                        • Developed and implemented an AI-driven, time-series forecasting model using Scikit-learn to accurately predict quarterly sales, which formed the core of the new inventory management strategy.
-                        • Translated model outputs into actionable insights by creating Tableau dashboards, leading to a 20% improvement in operational efficiency and a 25% reduction in inventory shortages through data-driven decision-making.`,
+    date: 'September 2023 - December 2023',
+    shortDescription: `•Built an end-to-end machine learning pipeline using SQL and Python for demand forecasting, deploying time-series models (ARIMA, Prophet) that reduced inventory stock-outs by 23%.
+                       •Developed an automated NLP classification system using BERT and XGBoost to map noisy shipment descriptions to standardized categories, improving accuracy by 35%.
+                       •Deployed a deep learning model (LSTM) for real-time sentiment analysis of customer emails, enabling the prediction of churn risk and prioritization of support issues.
+                       •Partnered with senior managers to analyze historical sales trends, providing a data-driven framework for inventory categorization that informed business strategy.
+
+`,
   },
   {
     icon: DrishyaLogo,
