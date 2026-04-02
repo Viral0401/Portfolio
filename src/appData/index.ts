@@ -128,7 +128,7 @@ export const serviceData = [
     icon: InvexiLogo,
     title: 'Invexi',
     position: 'AI & Software Engineering Intern',
-    date: 'Dec 2023 - May 2024',
+    date: 'April 2023 - November 2024',
     shortDescription: `• Led the development of an AI-powered video generation platform, architecting the backend services in Python and Flask.
                         • Built a dynamic and responsive user interface for the video platform using React and managed the data infrastructure with PostgreSQL.
                         • Engineered a Chrome extension with TypeScript and GoLang to automate the collection of product data for market research.
