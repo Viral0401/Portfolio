@@ -5,18 +5,18 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="bg-secondary my-8 grid grid-cols-1 gap-16 rounded-4xl p-8 md:my-16 md:grid-cols-2 md:gap-8 lg:gap-12">
+      className="relative grid grid-cols-1 gap-12 overflow-hidden rounded-3xl border border-border bg-secondary/80 p-7 md:grid-cols-2 md:p-10 lg:gap-20 lg:p-14">
       <div className="flex flex-col justify-between gap-8">
         <div>
-          <h3 className="text-neutral text-3xl font-bold">Let's Talk</h3>
-          <h4 className="text-accent text-2xl font-bold md:text-3xl">We'd love to help</h4>
-          <p className="text-neutral mt-8">
-            Crafting innovative solutions to solve real-world problems
+          <p className="text-accent mb-3 text-xs font-semibold uppercase tracking-[0.2em]">Start a conversation</p>
+          <h3 className="text-neutral text-3xl font-semibold tracking-tight md:text-4xl">Have a problem worth solving?</h3>
+          <p className="text-primary-content mt-5 max-w-md leading-7">
+            I'm always interested in thoughtful AI, data, software, and research collaborations.
           </p>
         </div>
 
         <div className="space-y-2">
-          <p className="text-neutral text-lg font-bold">Contact Information</p>
+          <p className="text-neutral mb-4 text-sm font-semibold">Contact information</p>
           <a
             href="mailto:viraldalal04@gmail.com"
             className="text-neutral hover:text-accent flex items-center gap-1 font-light transition-colors duration-300">

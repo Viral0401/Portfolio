@@ -11,17 +11,17 @@ interface EnhancedSkillsProps {
 
 const EnhancedSkills: React.FC<EnhancedSkillsProps> = ({ skillCategories }) => {
   return (
-    <section id="skills" className="my-14">
-      <div className="flex flex-col items-center">
-        <div className="text-center">
+    <section id="skills">
+      <div>
+        <div>
           <SectionHeading
             title="Technical Skills"
             subtitle="Technologies and tools I work with"
           />
         </div>
 
-        <div className="mt-8 w-full max-w-[1100px] bg-secondary border-border rounded-[14px] border p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-10 w-full rounded-2xl border border-border bg-secondary/60 p-6 md:p-8">
+          <div className="grid grid-cols-1 gap-x-10 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
             {skillCategories.map((category, index) => (
               <SkillCategory
                 key={index}

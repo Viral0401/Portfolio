@@ -1,10 +1,11 @@
 {
   "priority": 2,
-  "title": "Packagenius",
-  "shortDescription": "PackageGenius is an all-in-one packaging design tool that helps users visualize products, generate production-ready dielines, and ensure regulatory compliance. The platform transforms 2D designs into interactive 3D models while simplifying compliance through an intuitive checklist system.",
-  "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1656970810/Codevertiser_xlxdje.png",
-  "livePreview": "https://www.youtube.com/watch?v=5NzvKr4Qt1k",
+  "title": "Smart File Tagger",
+  "shortDescription": "A production-oriented MLOps system embedded into Nextcloud that classifies academic documents and turns user corrections into future training data. Built the complete lifecycle across FastAPI inference, PostgreSQL feedback capture, automated retraining, MLflow experiments, Prometheus/Grafana monitoring, canary promotion, drift detection, and rollback. The leakage-safe pipeline used 7,057 MIT OpenCourseWare documents, expanded to 42,337 examples, with the selected LightGBM model achieving 55.7% macro F1.",
+  "cover": "",
+  "livePreview": "",
+  "type": "Production MLOps",
   "visitors": "",
-  "githubLink": "https://github.com/Viral0401/Packagenius",
+  "githubLink": "https://github.com/Viral0401/Smart-File-Tagger",
   "earned": ""
 }

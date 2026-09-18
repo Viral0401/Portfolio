@@ -16,10 +16,10 @@ export default async function Home() {
   const projects = await getAllProjects()
 
   return (
-    <main>
+    <main id="top">
       <Hero />
       <Skills skills={skillList} />
-      <div className="mx-auto my-8 max-w-[1200px] px-4 md:my-[3.75rem]">
+      <div className="mx-auto max-w-[1200px] space-y-24 px-5 py-20 sm:px-8 md:space-y-32 md:py-28">
         <Education />
         <ServiceSection />
         <ProjectSection projects={projects} />

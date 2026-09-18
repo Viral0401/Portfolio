@@ -8,5 +8,6 @@ import NezalLogo from '../assets/images/nezal.png'
 import DrishyaLogo from '../assets/images/drishya.png'
 import InITLogo from '../assets/images/init.png'
 import FitzenLogo from '../assets/images/fitzen.png'
+import AdobeLogo from '../assets/images/adobe.svg'
 
-export { HeroImage, Uni1Logo, Uni2Logo, SimpplLogo, IITPatna, InvexiLogo, NezalLogo, DrishyaLogo, InITLogo, FitzenLogo }
+export { HeroImage, Uni1Logo, Uni2Logo, SimpplLogo, IITPatna, InvexiLogo, NezalLogo, DrishyaLogo, InITLogo, FitzenLogo, AdobeLogo }

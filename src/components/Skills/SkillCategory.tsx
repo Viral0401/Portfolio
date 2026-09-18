@@ -8,15 +8,15 @@ interface SkillCategoryProps {
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <div className="mb-6">
-      <h3 className="text-accent text-lg font-semibold mb-3 flex items-center">
-        <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2.5"></span>
+      <h3 className="text-neutral mb-4 flex items-center text-sm font-semibold">
+        <span className="mr-2.5 h-px w-4 bg-accent"></span>
         {title}
       </h3>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <span 
             key={index}
-            className="bg-primary px-3 py-1.5 rounded-md text-sm text-primary-content border border-[#1e2d3d] hover:border-accent transition-colors duration-300"
+            className="rounded-lg border border-border bg-primary/60 px-3 py-1.5 text-xs text-primary-content transition duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:text-neutral"
           >
             {skill}
           </span>

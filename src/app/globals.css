@@ -19,16 +19,16 @@
 }
 
 [data-theme='dark'] {
-  --p: #011627;
-  --pc: #607b96;
-  --s: #011221;
-  --sc: #5565e8;
-  --tc: #99a1af;
-  --a: #18f2e5;
-  --n: #fff;
+  --p: #08111f;
+  --pc: #94a3b8;
+  --s: #0d1728;
+  --sc: #cbd5e1;
+  --tc: #8b9bb0;
+  --a: #5eead4;
+  --n: #f8fafc;
 
-  --b: #1e2d3d;
-  --marquee: #062b48;
+  --b: #203047;
+  --marquee: #101e32;
 
   /* for logo */
   --gradient-start: #18f2e5;
@@ -127,6 +127,273 @@
   }
 }
 
+@keyframes scroll-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes portrait-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+@keyframes loader-name-in-left {
+  from {
+    transform: translateY(115%) skewY(5deg);
+  }
+  to {
+    transform: translateY(0) skewY(0);
+  }
+}
+
+@keyframes loader-name-in-right {
+  from {
+    transform: translateY(-115%) skewY(-5deg);
+  }
+  to {
+    transform: translateY(0) skewY(0);
+  }
+}
+
+@keyframes loader-line-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.loader-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: #08111f;
+  transition: transform 700ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.loader-panel-top {
+  top: 0;
+}
+
+.loader-panel-bottom {
+  bottom: 0;
+}
+
+.loader-grid {
+  background-image:
+    linear-gradient(to right, rgb(94 234 212 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(94 234 212 / 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transition: opacity 350ms ease;
+}
+
+.loader-name-first {
+  animation: loader-name-in-left 750ms cubic-bezier(0.16, 1, 0.3, 1) 100ms both;
+}
+
+.loader-name-second {
+  animation: loader-name-in-right 750ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both;
+}
+
+.loader-line {
+  transform-origin: left;
+  animation: loader-line-in 850ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
+}
+
+.loader-kicker {
+  opacity: 0;
+  animation: fade-in 500ms ease 450ms forwards;
+}
+
+.loader-identity {
+  transition:
+    opacity 300ms ease,
+    transform 500ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.site-loader.is-leaving .loader-panel-top {
+  transform: translateY(-101%);
+}
+
+.site-loader.is-leaving .loader-panel-bottom {
+  transform: translateY(101%);
+}
+
+.site-loader.is-leaving .loader-grid {
+  opacity: 0;
+}
+
+.site-loader.is-leaving .loader-identity {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.hero-gradient {
+  color: transparent;
+  background-image: linear-gradient(110deg, #f8fafc 10%, #5eead4 38%, #a78bfa 64%, #fb7185 88%);
+  background-size: 220% 220%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.portrait-float {
+  animation: portrait-float 7s ease-in-out infinite;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-grid > :nth-child(1) {
+  background-image: linear-gradient(145deg, rgb(94 234 212 / 0.1), transparent 42%);
+}
+
+.project-grid > :nth-child(2) {
+  background-image: linear-gradient(145deg, rgb(167 139 250 / 0.12), transparent 42%);
+}
+
+.project-grid > :nth-child(3) {
+  background-image: linear-gradient(145deg, rgb(251 113 133 / 0.09), transparent 42%);
+}
+
+.project-grid > :nth-child(4) {
+  background-image: linear-gradient(145deg, rgb(56 189 248 / 0.1), transparent 42%);
+}
+
+.experience-grid > :nth-child(3n + 2):hover {
+  border-color: rgb(167 139 250 / 0.55);
+}
+
+.experience-grid > :nth-child(3n):hover {
+  border-color: rgb(251 113 133 / 0.4);
+}
+
+.research-grid > :nth-child(even) {
+  background-image: linear-gradient(145deg, rgb(167 139 250 / 0.06), transparent 40%);
+}
+
+.tech-marquee-track {
+  animation: tech-marquee 34s linear infinite;
+}
+
+.tech-marquee:hover .tech-marquee-track {
+  animation-play-state: paused;
+}
+
+.tech-marquee-item:nth-child(3n + 2) svg {
+  color: #a78bfa;
+}
+
+.tech-marquee-item:nth-child(3n) svg {
+  color: #38bdf8;
+}
+
+.tech-marquee-fade {
+  position: absolute;
+  inset-block: 0;
+  z-index: 2;
+  width: clamp(3rem, 10vw, 9rem);
+  pointer-events: none;
+}
+
+.tech-marquee-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--p), transparent);
+}
+
+.tech-marquee-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--p), transparent);
+}
+
+@keyframes tech-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.pointer-glow {
+  background:
+    radial-gradient(circle at center, rgb(94 234 212 / 0.14), rgb(139 92 246 / 0.065) 38%, transparent 70%);
+  filter: blur(4px);
+}
+
+.interactive-tilt {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    transform 180ms ease-out,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.interactive-tilt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgb(255 255 255 / 0.075),
+    transparent 65%
+  );
+  transition: opacity 220ms ease;
+}
+
+.interactive-tilt:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient,
+  .portrait-float,
+  .interactive-tilt,
+  .tech-marquee-track {
+    animation: none;
+    transform: none !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -158,7 +425,35 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 
-  @apply bg-primary text-white;
+  @apply bg-primary text-white antialiased;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 15% 5%, color-mix(in srgb, var(--a) 7%, transparent), transparent 26rem),
+    radial-gradient(circle at 85% 28%, rgb(139 92 246 / 0.07), transparent 30rem),
+    radial-gradient(circle at 20% 72%, rgb(251 113 133 / 0.045), transparent 26rem);
+  background-attachment: fixed;
+}
+
+body > header,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+::selection {
+  background: var(--a);
+  color: var(--p);
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .rehype-code-title {

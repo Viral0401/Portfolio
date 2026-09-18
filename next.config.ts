@@ -1,7 +1,13 @@
 import type { NextConfig } from 'next'
 
+const projectRoot = process.cwd()
+
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  outputFileTracingRoot: projectRoot,
+  turbopack: {
+    root: projectRoot,
+  },
 
   images: {
     remotePatterns: [

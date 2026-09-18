@@ -4,6 +4,9 @@ import './globals.css'
 import Footer from '@/components/Footer/Footer'
 import Navbar from '@/components/Navbar/Navbar'
 import ThemeMenu from '@/components/Theme/ThemeMenu'
+import ExperienceLayer from '@/components/Experience/ExperienceLayer'
+import NeuralBackground from '@/components/Hero/NeuralBackground'
+import SiteLoader from '@/components/Loader/SiteLoader'
 import { Fira_Code } from 'next/font/google'
 import Script from 'next/script' // ADDED
 
@@ -21,7 +24,7 @@ const firaCode = Fira_Code({ subsets: ['latin'], weight: ['300', '400', '500', '
 
 const title = 'Viral Dalal | Solving real-world problems with AI & Data'
 const description =
-  ""
+  "Viral Dalal is an NYU Computer Engineering master's student and Adobe Software Engineering Intern building production AI, data, and software systems. Seeking 2027 full-time roles."
 
 export const metadata: Metadata = {
   title,
@@ -55,8 +58,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="dark">
-      <body className={firaCode.className}>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <body className={firaCode.className} suppressHydrationWarning>
+        <SiteLoader />
+        <NeuralBackground />
         {process.env.NODE_ENV === 'production' && clarityId && (
           <Script id="ms-clarity" strategy="afterInteractive">
             {`(function(c,l,a,r,i,t,y){
@@ -66,10 +71,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               })(window, document, "clarity", "script", "${clarityId}");`}
           </Script>
         )}
-        <header>
+        <header className="sticky top-0 z-50">
           <Navbar />
         </header>
         {children}
+        <ExperienceLayer />
         <ThemeMenu />
         <Footer />
       </body>

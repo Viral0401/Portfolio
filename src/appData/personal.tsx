@@ -8,6 +8,7 @@ import {
   Facebook,
   ResumeIcon, // new icon you will add in utils/icons.tsx
 } from '@/utils/icons'
+import { SiGooglescholar } from 'react-icons/si'
 
 export const socials = [
   {
@@ -19,8 +20,12 @@ export const socials = [
     icon: <LinkedIn />
   },
   {
-    href: 'https://drive.google.com/file/d/1-fcHxMMpmst7pIn7GhZh9K2E-UMXRGol/view?usp=drive_link', 
+    href: 'https://drive.google.com/file/d/1HJ5NQvslD8Wq4aus308rvNqKDBmbcsvR/view?usp=sharing',
     icon: <ResumeIcon />
+  },
+  {
+    href: 'https://scholar.google.com/citations?user=wwizFiEAAAAJ&hl=en',
+    icon: <SiGooglescholar />
   },
   {
     href: 'https://x.com/wtfviral_?s=21&t=RiRt3dWDsg85rkCTyPhZrA', // update to your profile

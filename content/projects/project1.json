@@ -1,10 +1,10 @@
 {
   "priority": 1,
-  "title": "FitZen",
-  "shortDescription": "Health and Fitness Tracker is an AI-powered wellness platform that combines fitness tracking, nutrition planning, and mental health support in one application.\n\nThe app uses machine learning to provide personalized workout plans, diet recommendations, yoga pose detection, and mental wellness resources with progress tracking.",
-  "cover": "https://res.cloudinary.com/dfssjvkj2/image/upload/v1756327677/urcagup4dsczj3sbzajt.png",
-  "livePreview": "https://www.youtube.com/watch?v=HgBd2bfBc9U",
-  "type": "",
-  "githubLink": "https://github.com/Viral0401/Fitzen",
+  "title": "Code to Give — Lemontree",
+  "shortDescription": "Winner at Morgan Stanley Code to Give USA 2026. Built a full-stack volunteer coordination platform for Lemontree, helping organizers create and run food-access campaigns through an AI conversational campaign builder. The system combines a 3-node LangGraph agent on AWS Bedrock, 12 campaign tools, live pantry discovery, automatic PDF flyers, email invitations, calendar integration, gamification, impact reporting, and a personalized campaign feed.",
+  "cover": "",
+  "livePreview": "https://track-a-team4-project.vercel.app",
+  "type": "Hackathon Winner",
+  "githubLink": "https://github.com/Viral0401/Code-to-Give",
   "siteAge": ""
 }

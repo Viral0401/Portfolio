@@ -28,41 +28,47 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   date,
 }) => {
   const imageMode = isImageLike(icon)
+  const isAdobe = title.toLowerCase() === 'adobe'
 
   return (
-    <div className="bg-secondary border-border flex flex-col items-center rounded-[14px] border p-5">
+    <article className="group relative overflow-hidden rounded-2xl border border-border bg-secondary/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-black/15">
+      <div className="absolute inset-y-0 left-0 w-0.5 bg-accent opacity-0 transition-opacity group-hover:opacity-100" />
+      <div className="flex items-start gap-4">
       {imageMode ? (
-        <div className="my-1 h-24 w-24">
+        <div
+          className={`flex size-14 shrink-0 items-center justify-center rounded-xl border p-2 ${
+            isAdobe
+              ? 'border-[#fa0f00]/25 bg-[#fa0f00]/10'
+              : 'border-border bg-white'
+          }`}
+        >
           <Image
             src={icon}
             alt={title}
-            width={96}
-            height={96}
-            className="h-full w-full object-contain"
+            width={56}
+            height={56}
+            className={`h-full w-full object-contain ${isAdobe ? 'p-0.5' : ''}`}
           />
         </div>
       ) : (
-        <div className="my-1 flex h-24 w-24 items-center justify-center">
+        <div className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-primary">
           {React.createElement(icon as IconComponent, { className: 'h-16 w-16' })}
         </div>
       )}
 
-      <h5 className="text-accent mt-2 mb-1 text-center text-base font-semibold">{title}</h5>
-
-      {position && (
-        <div className="mb-0.5 inline-block rounded-md bg-[#10B9811A] px-2 py-0.5 text-xs font-medium text-[#34D399]">
-          {position}
+        <div className="min-w-0">
+          <h3 className="text-neutral text-base font-semibold">{title}</h3>
+          {position && <p className="mt-1 text-sm text-accent">{position}</p>}
+          {date && <p className="text-primary-content mt-1 text-xs">{date}</p>}
         </div>
-      )}
+      </div>
 
-      {date && <div className="text-neutral mb-2 mt-0 text-sm">{date}</div>}
-
-      <div className="bg-primary rounded-2xl p-4">
-        <p className="text-primary-content whitespace-pre-line text-center text-sm font-normal">
+      <div className="mt-5 border-t border-border pt-5">
+        <p className="text-primary-content whitespace-pre-line text-sm leading-6">
           {shortDescription}
         </p>
       </div>
-    </div>
+    </article>
   )
 }
 

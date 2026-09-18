@@ -1,12 +1,12 @@
 {
   "priority": 4,
-  "title": "Medex",
-  "shortDescription": "Medex is a healthcare platform designed to streamline medical diagnostics and patient care through intelligent data processing and interactive interfaces. The application combines clinical analytics with user-friendly design to improve healthcare accessibility, optimize resource allocation, and enhance treatment outcomes for both patients and healthcare providers.",
-  "cover": "https://res.cloudinary.com/dfssjvkj2/image/upload/v1757348200/o5pu1olfjsrlydery3iv.png",
-  "type": "",
-  "livePreview": "",
+  "title": "PackageGenius",
+  "shortDescription": "A generative-AI packaging platform for producing sustainable material recommendations, 2D package visuals, dielines, and interactive 3D models. The system combines fine-tuned Stable Diffusion, Mistral-7B with LoRA/PEFT, PyTorch, OpenCV, React, and Node.js.",
+  "cover": "",
+  "type": "Published Research",
+  "livePreview": "https://www.youtube.com/watch?v=5NzvKr4Qt1k",
   "siteAge": "",
   "visitors": "",
-  "githubLink": "https://github.com/Viral0401/Medex",
+  "githubLink": "https://github.com/Viral0401/Packagenius",
   "earned": ""
 }

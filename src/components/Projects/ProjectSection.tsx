@@ -9,11 +9,11 @@ interface ProjectSectionProps {
 const ProjectSection: React.FC<ProjectSectionProps> = ({ projects }) => {
   return (
     <section id="projects">
-      <div className="flex justify-center">
-      <SectionHeading title="Projects" />
+      <div>
+      <SectionHeading title="Selected Projects" subtitle="Production systems, award-winning products, and research-driven builds across AI, data, and software engineering." />
       </div>
 
-      <div className="my-8 grid grid-cols-1 gap-8 md:my-12 md:grid-cols-2">
+      <div className="project-grid mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard key={project.priority} data={project} />
         ))}

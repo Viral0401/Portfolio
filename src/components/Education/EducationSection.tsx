@@ -7,8 +7,8 @@ import { StaticImageData } from 'next/image'
 const EducationSection: React.FC = () => {
   return (
     <section id="education">
-      <div className="flex flex-col items-center">
-        <div className="text-center">
+      <div>
+        <div>
           <SectionHeading
             title="Education"
             // subtitle=" My relevant experiences in the industry of engineering and technology"
@@ -16,7 +16,7 @@ const EducationSection: React.FC = () => {
         </div>
 
         {/* one column only, stacked vertically */}
-        <div className="my-8 grid grid-cols-1 gap-8 md:my-12">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {education.map((edu) => {
             // Properly check the type and handle the conversion safely
             const cover = typeof edu.cover === 'string'

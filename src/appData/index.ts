@@ -18,7 +18,7 @@ export const education = [
     priority: 1,
     title: 'Masters in Computer Engineering',
     shortDescription:
-      'Relevant Coursework: Machine Learning, Computing Systems Architecture, Real Time Embedded Systems',
+      'Relevant Coursework: Software Engineering, Machine Learning, MLOps, Big Data, Systems Engineering, Deep Learning, Real-Time Embedded Systems, Computing Systems Architecture',
     cover: Uni1Logo,
     duration: '2025-2027',
     institute: 'New York University',
@@ -94,8 +94,18 @@ import { InvexiLogo } from '@/utils/images'
 import { NezalLogo } from '@/utils/images'
 import { DrishyaLogo } from '@/utils/images'
 import { InITLogo } from '@/utils/images' 
+import { AdobeLogo } from '@/utils/images'
 
 export const serviceData = [
+  {
+    icon: AdobeLogo,
+    title: 'Adobe',
+    position: 'Software Engineering Intern',
+    date: 'May 2026 - August 2026',
+    shortDescription: `• Contributing to Adobe Journey Optimizer B2B Edition on the Platform Engineering team, working on core infrastructure and data-foundation services that support enterprise marketing workflows.
+                       • Building and strengthening event-driven platform capabilities using Kafka for reliable movement and processing of application data across distributed services.
+                       • Developing backend query services and foundational data-access capabilities with an emphasis on scalability, observability, and operational reliability.`,
+  },
   {
     icon: SimpplLogo,
     title: 'SimPPL',
@@ -247,7 +257,7 @@ export const researchData = [
     publishedAt: "2025",
     venue: "Stanford's Trust and Safety Research Conference",
     year: "2025",
-    status: "Accepted" as const,
+    status: "Presented" as const,
     keyPoints: [
       "Proposed a novel framework for multi-agent debates to enhance content moderation on social media platforms."
     ],
@@ -261,11 +271,11 @@ export const researchData = [
     publishedAt: "2025",
     venue: "Scientometrics, Springer",
     year: "2025",
-    status: "Accepted" as const,
+    status: "Published" as const,
     keyPoints: [
       "Constructed InsightfulPeer, a peer review classification dataset leveraging Chain-of-Thought reasoning with LLMs (LlaMa-3.1, GPT-4, Mixtral, Gemma) and evaluated model human agreement using Cohen's and Fleiss' Kappa.",
     ],
-    // paperUrl: "#",
+    paperUrl: "https://link.springer.com/article/10.1007/s11192-025-05435-7",
     githubUrl: "https://github.com/PrabhatkrBharti/InsightfulPeer-CoT",
     proofUrl: "https://drive.google.com/file/d/1V0BPE3ylWm_lbhIZQsByUZXzj4DjK1M5/view?usp=drive_link"
   },
@@ -273,14 +283,14 @@ export const researchData = [
     {
     id: "IIT2",
     title: "ConsistentPeer - Reviewers Through GraphRAG-Driven Counterfactuals to Measure Consistency in Peer Review",
-    publishedAt: "2025",
+    publishedAt: "2026",
     venue: "International Journal of Data Science and Analytics, Springer",
-    year: "2025",
-    status: "Minor Revision" as const,
+    year: "2026",
+    status: "Published" as const,
     keyPoints: [
       "Proposed a novel knowledge graph based framework to evaluate consistency in peer reviews by correlating review text, confidence scores, and ratings, incorporating counterfactual reasoning to detect and resolve inconsistencies."
     ],
-    // paperUrl: "#",
+    paperUrl: "https://link.springer.com/article/10.1007/s41060-026-01047-3",
     githubUrl: "https://github.com/PrabhatkrBharti/ConsistentPeer",
     // proofUrl: "#"
   },
@@ -288,14 +298,14 @@ export const researchData = [
     {
     id: "IIT3",
     title: "Co-Reviewer - Are LLMs on the Same Page as Human Reviewers? An Agentic AI Framework for Evaluating Review Quality and Consensus",
-    publishedAt: "2025",
+    publishedAt: "2026",
     venue: "Scientometrics, Springer",
-    year: "2025",
-    status: "Minor Revision" as const,
+    year: "2026",
+    status: "Published" as const,
     keyPoints: [
       "Designed Co-Reviewer, a multi agent LLM framework for collaborative peer review generation and refinement; evaluated its outputs against human reviews across informativeness, sentiment, and editorial decision alignment."
     ],
-    // paperUrl: "#",
+    paperUrl: "https://link.springer.com/article/10.1007/s11192-026-05557-6",
     githubUrl: "https://github.com/PrabhatkrBharti/Co-Reviewer",
     // proofUrl: "#"
   },
@@ -384,23 +394,27 @@ export const researchData = [
 export const enhancedSkillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C++", "Java", "HTML", "CSS", "JavaScript", "TypeScript", "SQL", "Go"]
+    skills: ["Python", "TypeScript", "JavaScript", "SQL", "Go", "Java", "C++"]
   },
   {
-    title: "Libraries & Frameworks",
-    skills: ["React.js", "Node.js", "Express.js", "Next.js", "Flask", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "PyTorch", "TensorFlow", "Tailwind"]
+    title: "AI & Machine Learning",
+    skills: ["PyTorch", "TensorFlow", "Scikit-learn", "LightGBM", "Pandas", "NumPy", "RAG", "LLM Agents", "LangChain", "LangGraph"]
   },
   {
-    title: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "Firebase", "MySQL", "Redis", "SQLite"]
+    title: "Backend & Data",
+    skills: ["FastAPI", "Node.js", "Express.js", "Flask", "Kafka", "Spark", "REST APIs", "Event-driven Systems"]
   },
   {
-    title: "Tools & Platforms",
-    skills: ["Git", "AWS", "Azure", "Docker", "Kubernetes", "Tableau", "Kafka", "Spark", "Hadoop"]
+    title: "Cloud & MLOps",
+    skills: ["AWS", "Amazon Bedrock", "Docker", "Kubernetes", "MLflow", "Prometheus", "Grafana", "CI/CD", "Model Monitoring"]
   },
   {
-    title: "Interests",
-    skills: ["Data Science", "Artificial Intelligence", "Software Engineering", "Data Engineering", "Data Analysis", "Research", "Finance"]
+    title: "Frontend & Product",
+    skills: ["React.js", "Next.js", "Tailwind CSS", "HTML", "CSS", "Supabase"]
+  },
+  {
+    title: "Databases & Infrastructure",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "SQLite", "Nextcloud", "Git"]
   }
 ];
 

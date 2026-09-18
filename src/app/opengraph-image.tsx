@@ -1,9 +1,7 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
-
 // Image metadata
-export const alt = 'SOLOPRENEUR'
+export const alt = 'Viral Dalal — AI, Data, and Software Engineering portfolio'
 
 export const size = {
   width: 1200,
@@ -27,10 +25,10 @@ export default async function Image() {
           padding: '1rem',
         }}>
         <h1 style={{ fontSize: 32, color: '#18f2e5', margin: 0 }}>
-          Viral Dalal |
+          Viral Dalal | AI · Data · Software
         </h1>
         <h2 style={{ fontSize: 40, color: 'white', marginTop: 30 }}>
-          Looking to solve real world problems by leveraging AI and Data.
+          Adobe Software Engineering Intern · NYU Computer Engineering · Seeking 2027 full-time roles
         </h2>
       </div>
     ),

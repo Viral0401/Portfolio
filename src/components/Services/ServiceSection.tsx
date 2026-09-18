@@ -5,16 +5,16 @@ import ServiceCard from './ServiceCard'
 
 const ServiceSection = () => {
   return (
-    <section id="services" className="my-14">
-      <div className="flex flex-col items-center">
-        <div className="text-center">
+    <section id="services">
+      <div>
+        <div>
           <SectionHeading
             title="Experiences"
-            subtitle=" My relevant experiences in the industry of engineering and technology"
+            subtitle="Building production AI, data, and software systems across research, startups, and community leadership."
           />
         </div>
 
-        <div className="mt-8 w-full max-w-[1100px] grid grid-cols-1 gap-x-8 gap-y-8 md:mt-[3.75rem] md:grid-cols-2">
+        <div className="experience-grid mt-10 grid w-full grid-cols-1 gap-5 md:grid-cols-2">
           {serviceData.map((service, index) => (
             <ServiceCard
               key={index}

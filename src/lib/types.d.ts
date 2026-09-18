@@ -35,7 +35,7 @@ export interface Research {
   title: string;
   venue: string;
   year: string;
-  status: 'Published' | 'Under Review' | 'Preprint' | 'Accepted' | 'Minor Revision';
+  status: 'Published' | 'Presented' | 'Under Review' | 'Preprint' | 'Accepted' | 'Minor Revision';
   keyPoints: string[];
   paperUrl?: string;
   githubUrl?: string;
